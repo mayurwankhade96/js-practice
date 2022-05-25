@@ -3,20 +3,18 @@
 // * * *
 // * * * *
 // * * * * *
-// * * * * * *
-// * * * * * * *
-// * * * * * * * *
-// * * * * * * * * *
-// * * * * * * * * * *
 
-let string = "";
+function pattern1(rowCount) {
+  let string = "";
 
-for (let row = 1; row <= 10; row++) {
-  for (let column = 1; column <= row; column++) {
-    string = string + "* ";
+  for (let row = 1; row <= rowCount; row++) {
+    for (let column = 1; column <= row; column++) {
+      string = string + "* ";
+    }
+    // when one row is printed, we need to add a new line
+    string = string + "\n";
   }
-  // when one row is printed, we need to add a new line
-  string = string + "\n";
+  console.log(string);
 }
 
-console.log(string);
+pattern1(5);

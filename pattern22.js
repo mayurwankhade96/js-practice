@@ -92,3 +92,27 @@ function pattern57(numberOfRows) {
 }
 
 pattern57(7);
+
+// Alternate approach
+// 1
+// 0 1
+// 1 0 1
+// 0 1 0 1
+// 1 0 1 0 1
+// 0 1 0 1 0 1
+// 1 0 1 0 1 0 1
+
+function pattern58(numberOfRows) {
+  let string = "";
+
+  for (let i = 1; i <= numberOfRows; i++) {
+    for (let j = 0; j < i; j++) {
+      string = string + ((i + j) % 2);
+    }
+    string += "\n";
+  }
+
+  console.log(string);
+}
+
+pattern58(7);

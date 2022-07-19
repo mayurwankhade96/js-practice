@@ -26,8 +26,8 @@ isPrime(2);
 // Extend the program to take a range of number as input and output the Prime Numbers in that range.
 
 function getPrimeNumbers(range) {
-  let isPrime = true;
   for (let i = 2; i <= range; i++) {
+    let isPrime = true;
     for (let j = 2; j < i; j++) {
       if (i % j === 0) {
         isPrime = false;
@@ -35,10 +35,8 @@ function getPrimeNumbers(range) {
     }
     if (isPrime === true) {
       console.log(i);
-    } else {
-      isPrime = true;
     }
   }
 }
 
-getPrimeNumbers(15);
+getPrimeNumbers(50);
